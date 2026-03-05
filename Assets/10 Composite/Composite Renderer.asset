@@ -42,17 +42,17 @@ MonoBehaviour:
   - {fileID: -5351138426631849938}
   m_RendererFeatureMap: 2e78aad8f3efbcb5
   m_UseNativeRenderPass: 0
-  postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
+  postProcessData: {fileID: 0}
   m_AssetVersion: 3
   m_PrepassLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_OpaqueLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_TransparentLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_DefaultStencilState:
     overrideStencilState: 0
     stencilReference: 0

@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 291904333}
   - component: {fileID: 291904335}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: Composite Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
-  m_RendererIndex: 4
+  m_RendererIndex: 3
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
@@ -843,7 +843,7 @@ GameObject:
   - component: {fileID: 748142249}
   - component: {fileID: 748142251}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: VFX Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -881,7 +881,7 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
-  m_RendererIndex: 2
+  m_RendererIndex: 1
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
@@ -1019,7 +1019,7 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 0
   m_CameraType: 0
   m_Cameras: []
-  m_RendererIndex: 0
+  m_RendererIndex: 4
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -1331,7 +1331,7 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
-  m_RendererIndex: 1
+  m_RendererIndex: 0
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
@@ -1684,7 +1684,7 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
-  m_RendererIndex: 3
+  m_RendererIndex: 2
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1024
