@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3371620736912891287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecffae8029144c658443a6a44234b07, type: 3}
+  m_Name: OverlayFXRendererFeature
+  m_EditorClassIdentifier: Assembly-CSharp::URPCameraEffect.OverlayFXRendererFeature
+  m_Active: 1
+  _passEvent: 600
 --- !u!114 &-1552631545115190400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,7 +54,8 @@ MonoBehaviour:
     probeVolumeBlendStatesCS: {fileID: 0}
   m_RendererFeatures:
   - {fileID: -1552631545115190400}
-  m_RendererFeatureMap: 80db57fed5f173ea
+  - {fileID: -3371620736912891287}
+  m_RendererFeatureMap: 80db57fed5f173ea6962f7aacd9835d1
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 0}
   m_AssetVersion: 3
@@ -67,4 +82,4 @@ MonoBehaviour:
   m_DepthAttachmentFormat: 0
   m_DepthTextureFormat: 0
   m_AccurateGbufferNormals: 0
-  m_IntermediateTextureMode: 0
+  m_IntermediateTextureMode: 1

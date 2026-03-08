@@ -879,6 +879,7 @@ GameObject:
   - component: {fileID: 748142250}
   - component: {fileID: 748142249}
   - component: {fileID: 748142251}
+  - component: {fileID: 748142252}
   m_Layer: 0
   m_Name: VFX Camera
   m_TagString: Untagged
@@ -1021,6 +1022,20 @@ MonoBehaviour:
   <DitherStrength>k__BackingField: 0.4
   <Opacity>k__BackingField: 1
   <Shader>k__BackingField: {fileID: 4800000, guid: 5d0f93ba092e5a545bab40b50ba2861e, type: 3}
+--- !u!114 &748142252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748142247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e99f510a24f1948069606fdae7736bc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::URPCameraEffect.OverlayFXController
+  <Opacity>k__BackingField: 1
+  _shader: {fileID: 4800000, guid: ca6a2ea2ff9034c16b438b0aea9ac9f4, type: 3}
 --- !u!1 &829016481
 GameObject:
   m_ObjectHideFlags: 0
