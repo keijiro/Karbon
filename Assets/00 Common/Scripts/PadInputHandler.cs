@@ -6,67 +6,87 @@ namespace Karbon {
 
 public sealed class PadInputHandler : MonoBehaviour
 {
-    [SerializeField] InputAction _action = null;
-    [SerializeField] float _releaseTime = 0.5f;
-    [SerializeField] UnityEvent<float> _onValueChanged = null;
+    [field:SerializeField] public float ReleaseTime { get; set; } = 0.5f;
+    [field:SerializeField, Min(1)] public float DecayExponent { get; set; } = 2.0f;
+    [Space]
+    [SerializeField] InputAction _input = null;
+    [Space]
+    [SerializeField] UnityEvent<float> _valueTarget = null;
 
     const float kHoldTime = 0.5f;
 
     float _currentValue;
-    float _timer;
     float _maxStrength;
     float _attenuationRate;
-    bool _wasPressed;
 
-    void OnEnable() => _action?.Enable();
-    void OnDisable() => _action?.Disable();
+    double _startTime;
+    float _currentStrength;
+    bool _isPressed;
 
-    void Update()
+    void OnEnable()
     {
-        if (_action == null) return;
+        if (_input == null) return;
+        _input.started += OnStarted;
+        _input.performed += OnPerformed;
+        _input.canceled += OnCanceled;
+        _input.Enable();
+    }
 
-        var strength = _action.ReadValue<float>();
-        var isPressed = strength > 0;
+    void OnDisable()
+    {
+        if (_input == null) return;
+        _input.started -= OnStarted;
+        _input.performed -= OnPerformed;
+        _input.canceled -= OnCanceled;
+        _input.Disable();
+    }
 
-        if (isPressed)
+    void OnStarted(InputAction.CallbackContext context)
+    {
+        _startTime = context.time;
+        _maxStrength = 0;
+        _isPressed = true;
+    }
+
+    void OnPerformed(InputAction.CallbackContext context)
+    {
+        _currentStrength = context.ReadValue<float>();
+        _maxStrength = Mathf.Max(_maxStrength, _currentStrength);
+    }
+
+    void OnCanceled(InputAction.CallbackContext context)
+    {
+        _isPressed = false;
+        var duration = (float)(context.time - _startTime);
+
+        if (duration < kHoldTime)
         {
-            if (!_wasPressed)
-            {
-                _timer = 0;
-                _maxStrength = 0;
-            }
-
-            _timer += Time.deltaTime;
-            _maxStrength = Mathf.Max(_maxStrength, strength);
-            _currentValue = strength;
+            // Case 1: Short press
+            _currentValue = 1.0f;
+            var decayTime = ReleaseTime * Mathf.Pow(_maxStrength, DecayExponent);
+            _attenuationRate = (decayTime > 1e-5f) ? (1.0f / decayTime) : float.MaxValue;
         }
         else
         {
-            if (_wasPressed)
-            {
-                if (_timer < kHoldTime)
-                {
-                    // Case 1: Short press
-                    _currentValue = 1.0f;
-                    var duration = _releaseTime * _maxStrength;
-                    _attenuationRate = (duration > 1e-5f) ? (1.0f / duration) : float.MaxValue;
-                }
-                else
-                {
-                    // Case 2: Long press
-                    _attenuationRate = (_releaseTime > 1e-5f) ? (1.0f / _releaseTime) : float.MaxValue;
-                }
-            }
+            // Case 2: Long press
+            // _currentValue starts decaying from the current strength at release.
+            _attenuationRate = (ReleaseTime > 1e-5f) ? (1.0f / ReleaseTime) : float.MaxValue;
+        }
+    }
 
-            if (_currentValue > 0)
-            {
-                _currentValue -= _attenuationRate * Time.deltaTime;
-                if (_currentValue < 0) _currentValue = 0;
-            }
+    void Update()
+    {
+        if (_isPressed)
+        {
+            _currentValue = _currentStrength;
+        }
+        else if (_currentValue > 0)
+        {
+            _currentValue -= _attenuationRate * Time.deltaTime;
+            if (_currentValue < 0) _currentValue = 0;
         }
 
-        _onValueChanged?.Invoke(_currentValue);
-        _wasPressed = isPressed;
+        _valueTarget?.Invoke(_currentValue);
     }
 }
 

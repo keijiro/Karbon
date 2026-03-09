@@ -219,8 +219,6 @@ GameObject:
   - component: {fileID: 291904335}
   - component: {fileID: 291904336}
   - component: {fileID: 291904337}
-  - component: {fileID: 291904338}
-  - component: {fileID: 291904339}
   m_Layer: 0
   m_Name: Composite Camera
   m_TagString: Untagged
@@ -392,131 +390,6 @@ MonoBehaviour:
   <Hue>k__BackingField: 0.7
   <Seed>k__BackingField: 364
   _shader: {fileID: 4800000, guid: a06c33c946564cd19c5200c852eb0551, type: 3}
---- !u!114 &291904338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 291904331}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16ef0bdf4969642e6b835a966ce5b812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CompositeEffectController
-  _glitch1Action:
-    m_Name: Glitch 1
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 34f5b490-616f-43a0-aaaf-6a442a22a69b
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: d329cc98-b041-45cb-b16d-5d7ecde93c0b
-      m_Path: <MidiDevice>/note080
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Glitch 1
-      m_Flags: 0
-    m_Flags: 0
-  _glitch2Action:
-    m_Name: Glitch 2
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 92cf64c8-279b-4488-b05f-9da84e3416d9
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 7d926996-746e-46a1-ae27-f0d35e9729b2
-      m_Path: <MidiDevice>/note081
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Glitch 2
-      m_Flags: 0
-    m_Flags: 0
-  _glitch3Action:
-    m_Name: Glitch 3
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: aa73100f-e94b-405d-8136-2523f665d143
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 3a2a05e6-2b69-4dc0-8947-da9800e874e7
-      m_Path: <MidiDevice>/note082
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Glitch 3
-      m_Flags: 0
-    m_Flags: 0
-  _glitch4Action:
-    m_Name: Glitch 4
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 496e37fd-95a3-43dc-8d92-db24078a5609
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 8ca66ee7-b169-4e90-acc0-207913d9937d
-      m_Path: <MidiDevice>/note083
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Glitch 4
-      m_Flags: 0
-    m_Flags: 0
---- !u!114 &291904339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 291904331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 110b401dda72443f1a7fda05ab0fe505, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Karbon.PadInputHandler
-  _action:
-    m_Name: Action
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 525c5036-166a-4931-a21d-4c45876ac3c1
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: c3b46a5a-bda7-4c60-912f-723d7886027e
-      m_Path: <MidiDevice>/note080
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Action
-      m_Flags: 0
-    m_Flags: 0
-  _releaseTime: 0.5
-  _onValueChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 291904336}
-        m_TargetAssemblyTypeName: KinoGlitch.AnalogGlitchController, KinoGlitch.Runtime
-        m_MethodName: set_ScanLineJitter
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &305804264
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +422,96 @@ Transform:
   - {fileID: 291904332}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &392587428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 392587429}
+  - component: {fileID: 392587430}
+  m_Layer: 0
+  m_Name: Desync Glitch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &392587429
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392587428}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1986241847}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &392587430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392587428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110b401dda72443f1a7fda05ab0fe505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Karbon.PadInputHandler
+  <ReleaseTime>k__BackingField: 0.5
+  <DecayExponent>k__BackingField: 2
+  _input:
+    m_Name: Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b3355008-e4cd-4243-b11e-6fc0da49a9e1
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 2661244b-42e5-4a50-8e6e-b2afbbfc86e3
+      m_Path: <MidiDevice>/note081
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input
+      m_Flags: 0
+    m_Flags: 0
+  _valueTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 291904336}
+        m_TargetAssemblyTypeName: KinoGlitch.AnalogGlitchController, KinoGlitch.Runtime
+        m_MethodName: set_HorizontalShake
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 291904336}
+        m_TargetAssemblyTypeName: KinoGlitch.AnalogGlitchController, KinoGlitch.Runtime
+        m_MethodName: set_VerticalJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &449443676
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,6 +955,7 @@ Transform:
   m_Children:
   - {fileID: 1152344035}
   - {fileID: 2140875987}
+  - {fileID: 1060484555}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &748142247
@@ -1292,6 +1256,38 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 548964268}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1060484554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1060484555}
+  m_Layer: 0
+  m_Name: Pad Input
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1060484555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060484554}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1986241847}
+  m_Father: {fileID: 708108418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1152344034
 GameObject:
@@ -1979,6 +1975,84 @@ Transform:
   - {fileID: 1977628455}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1639385699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1639385700}
+  - component: {fileID: 1639385701}
+  m_Layer: 0
+  m_Name: Scanline Glitch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1639385700
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639385699}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1986241847}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1639385701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639385699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110b401dda72443f1a7fda05ab0fe505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Karbon.PadInputHandler
+  <ReleaseTime>k__BackingField: 0.5
+  <DecayExponent>k__BackingField: 2
+  _input:
+    m_Name: Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 5a82e826-a7e0-43f6-9abe-1268073444a6
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 454848b2-9bd3-4a29-b660-3c6b55a948e2
+      m_Path: <MidiDevice>/note080
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input
+      m_Flags: 0
+    m_Flags: 0
+  _valueTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 291904336}
+        m_TargetAssemblyTypeName: KinoGlitch.AnalogGlitchController, KinoGlitch.Runtime
+        m_MethodName: set_ScanLineJitter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1646683657
 GameObject:
   m_ObjectHideFlags: 0
@@ -2078,6 +2152,118 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1603278446}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1986241846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1986241847}
+  m_Layer: 0
+  m_Name: Gtlich
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1986241847
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986241846}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1639385700}
+  - {fileID: 392587429}
+  - {fileID: 2044074274}
+  m_Father: {fileID: 1060484555}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2044074273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2044074274}
+  - component: {fileID: 2044074275}
+  m_Layer: 0
+  m_Name: Ripple Glitch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2044074274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044074273}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1986241847}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2044074275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044074273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110b401dda72443f1a7fda05ab0fe505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Karbon.PadInputHandler
+  <ReleaseTime>k__BackingField: 0.5
+  <DecayExponent>k__BackingField: 2
+  _input:
+    m_Name: Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 5694dcfd-3c70-415e-bb7d-46e4237320be
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: e782df32-2682-4ac9-9e79-d7d80954f5b3
+      m_Path: <MidiDevice>/note082
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input
+      m_Flags: 0
+    m_Flags: 0
+  _valueTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 291904336}
+        m_TargetAssemblyTypeName: KinoGlitch.AnalogGlitchController, KinoGlitch.Runtime
+        m_MethodName: set_HorizontalRipple
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2136010312
 GameObject:
   m_ObjectHideFlags: 0
