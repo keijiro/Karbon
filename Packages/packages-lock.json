@@ -7,8 +7,8 @@
       "dependencies": {}
     },
     "com.unity.ai.assistant": {
-      "version": "2.0.0-pre.1",
-      "depth": 0,
+      "version": "2.1.0-pre.1",
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.2d.sprite": "1.0.0",
@@ -212,6 +212,14 @@
       "dependencies": {
         "com.unity.shadergraph": "17.3.0",
         "com.unity.render-pipelines.core": "17.3.0"
+      }
+    },
+    "jp.keijiro.ai.assistant.extensions": {
+      "version": "file:jp.keijiro.ai.assistant.extensions",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.ai.assistant": "2.1.0-pre.1"
       }
     },
     "jp.keijiro.bodypix": {
