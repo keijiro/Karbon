@@ -27,7 +27,7 @@ float4 FG_GridRandom(float2 uv, uint seed)
 
     // Use quantized 2D noise to derive a per-grid seed offset with spatial correlation.
     float2 npos = grid * float2(0.075, 2) + float(seed & 0xffu);
-    uint offs = (SimplexNoise(npos) + 2) * 4;
+    uint offs = (SimplexNoise(npos) + 2) * 8;
 
     return Hash4(seed + offs);
 }
@@ -62,7 +62,7 @@ half FG_SampleGlitch(half2 uv, half threshold, float4 rand)
     float2 skew = FG_SkewUV(uv, rand.z);
     half2 uv2 = frac(uv + rand.xy + skew);
     half3 src = SAMPLE_TEXTURE2D_X(_BlitTexture, sampler_LinearClamp, uv2).rgb;
-    return Luminance(LinearToSRGB(src)) > threshold + rand.w;
+    return Luminance(LinearToSRGB(src)) > threshold + rand.w * 0.6;
 }
 
 half4 Frag(Varyings input) : SV_Target

@@ -205,6 +205,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 548964268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &258258883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 258258884}
+  - component: {fileID: 258258885}
+  m_Layer: 0
+  m_Name: Flash Glitch Adapter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &258258884
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258258883}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1321876230}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &258258885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258258883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e643e549a809f4829903e7f0e3206a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Karbon.FlashGlitchAdapter
+  _trigger1MinMax: {x: 0.1, y: 1}
+  _trigger2MinMax: {x: 0.1, y: 1}
+  _target: {fileID: 291904337}
 --- !u!1 &291904331
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,9 +514,9 @@ MonoBehaviour:
   _triggerTarget:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 291904337}
-        m_TargetAssemblyTypeName: FlashGlitch.FlashGlitchController, FlashGlitch
-        m_MethodName: TriggerEffect1
+      - m_Target: {fileID: 258258885}
+        m_TargetAssemblyTypeName: Karbon.FlashGlitchAdapter, Assembly-CSharp
+        m_MethodName: Trigger1
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1664,6 +1711,7 @@ Transform:
   - {fileID: 1596775308}
   - {fileID: 295330436}
   - {fileID: 1547270760}
+  - {fileID: 258258884}
   m_Father: {fileID: 1060484555}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1329582850
@@ -2128,9 +2176,9 @@ MonoBehaviour:
   _triggerTarget:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 291904337}
-        m_TargetAssemblyTypeName: FlashGlitch.FlashGlitchController, FlashGlitch
-        m_MethodName: TriggerEffect2
+      - m_Target: {fileID: 258258885}
+        m_TargetAssemblyTypeName: Karbon.FlashGlitchAdapter, Assembly-CSharp
+        m_MethodName: Trigger2
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
