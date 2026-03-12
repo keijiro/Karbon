@@ -205,6 +205,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 548964268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &257743717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 257743718}
+  - component: {fileID: 257743719}
+  m_Layer: 0
+  m_Name: BG Plane Off
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &257743718
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257743717}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2039272841}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &257743719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257743717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110b401dda72443f1a7fda05ab0fe505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Karbon.PadInputHandler
+  <ReleaseTime>k__BackingField: 1
+  <DecayExponent>k__BackingField: 1
+  _input:
+    m_Name: Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: fb96e552-99e1-4128-8aa1-2674c95d2ea8
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 07c6fdba-c4d1-4905-9c53-f3cff6468621
+      m_Path: <MidiDevice>/note056
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input
+      m_Flags: 0
+    m_Flags: 0
+  _valueTarget:
+    m_PersistentCalls:
+      m_Calls: []
+  _triggerTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 291904335}
+        m_TargetAssemblyTypeName: Karbon.CompositeController, Assembly-CSharp
+        m_MethodName: set_BGPlane
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8600000, guid: bad04d2672e244c038e39223e10e58dc, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &258258883
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,6 +993,87 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &541364108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 541364109}
+  - component: {fileID: 541364110}
+  m_Layer: 0
+  m_Name: BG Plane Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &541364109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541364108}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2039272841}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &541364110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541364108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110b401dda72443f1a7fda05ab0fe505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Karbon.PadInputHandler
+  <ReleaseTime>k__BackingField: 1
+  <DecayExponent>k__BackingField: 1
+  _input:
+    m_Name: Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: fb96e552-99e1-4128-8aa1-2674c95d2ea8
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 07c6fdba-c4d1-4905-9c53-f3cff6468621
+      m_Path: <MidiDevice>/note057
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input
+      m_Flags: 0
+    m_Flags: 0
+  _valueTarget:
+    m_PersistentCalls:
+      m_Calls: []
+  _triggerTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 291904335}
+        m_TargetAssemblyTypeName: Karbon.CompositeController, Assembly-CSharp
+        m_MethodName: set_BGPlane
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8600000, guid: ae2bebc9b3ddf4ff18e7aefccbd27fe5, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1772,6 +1934,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2039272841}
   - {fileID: 1696721799}
   - {fileID: 591164062}
   - {fileID: 1986241847}
@@ -2076,6 +2239,87 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &1376445047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1376445048}
+  - component: {fileID: 1376445049}
+  m_Layer: 0
+  m_Name: BG Plane Flipbook
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1376445048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376445047}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2039272841}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1376445049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376445047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110b401dda72443f1a7fda05ab0fe505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Karbon.PadInputHandler
+  <ReleaseTime>k__BackingField: 1
+  <DecayExponent>k__BackingField: 1
+  _input:
+    m_Name: Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: fb96e552-99e1-4128-8aa1-2674c95d2ea8
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 07c6fdba-c4d1-4905-9c53-f3cff6468621
+      m_Path: <MidiDevice>/note058
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input
+      m_Flags: 0
+    m_Flags: 0
+  _valueTarget:
+    m_PersistentCalls:
+      m_Calls: []
+  _triggerTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 291904335}
+        m_TargetAssemblyTypeName: Karbon.CompositeController, Assembly-CSharp
+        m_MethodName: set_BGPlane
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8400000, guid: 037b4eca4e24d403dbe2b9b4e10bee50, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1411473415
 GameObject:
   m_ObjectHideFlags: 0
@@ -2219,16 +2463,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Duotone.Runtime::Duotone.DuotoneController
   <SourceMode>k__BackingField: 0
-  <LowColor>k__BackingField: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
-  <HighColor>k__BackingField: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
+  <LowColor>k__BackingField: {r: 0, g: 0, b: 0, a: 1}
+  <HighColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
   <SplitLevel>k__BackingField: 0.5
   <BlackColor>k__BackingField: {r: 0, g: 0, b: 0, a: 1}
-  <BlackLevel>k__BackingField: 0.2
+  <BlackLevel>k__BackingField: 0.5
   <WhiteColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
-  <WhiteLevel>k__BackingField: 0.8
+  <WhiteLevel>k__BackingField: 0.5
   <ContourColor>k__BackingField: {r: 0, g: 0, b: 0, a: 1}
-  <DitherType>k__BackingField: 3
-  <DitherStrength>k__BackingField: 0.3
+  <DitherType>k__BackingField: 2
+  <DitherStrength>k__BackingField: 0.4
   <Opacity>k__BackingField: 1
   <Shader>k__BackingField: {fileID: 4800000, guid: 5d0f93ba092e5a545bab40b50ba2861e, type: 3}
 --- !u!114 &1411473422
@@ -2244,7 +2488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: StrobePages.Runtime::StrobePages.StrobePagesController
   <AutoPageTurn>k__BackingField: 1
-  <PageInterval>k__BackingField: 0.2
+  <PageInterval>k__BackingField: 0.1
   <PageStiffness>k__BackingField: 4
   <MotionBlur>k__BackingField: 0.5
   <SampleCount>k__BackingField: 12
@@ -2536,7 +2780,7 @@ MonoBehaviour:
   _pathMode: 0
   _filePath: Flower.mov
   _time: 0
-  _speed: 5
+  _speed: 10
   _loop: 1
   _targetTexture: {fileID: 0}
   _targetRenderer: {fileID: 1472467970}
@@ -3013,6 +3257,87 @@ Transform:
   - {fileID: 1329582851}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1657320763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1657320764}
+  - component: {fileID: 1657320765}
+  m_Layer: 0
+  m_Name: FG Plane Off
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1657320764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657320763}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2039272841}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1657320765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657320763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110b401dda72443f1a7fda05ab0fe505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Karbon.PadInputHandler
+  <ReleaseTime>k__BackingField: 1
+  <DecayExponent>k__BackingField: 1
+  _input:
+    m_Name: Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: fb96e552-99e1-4128-8aa1-2674c95d2ea8
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 07c6fdba-c4d1-4905-9c53-f3cff6468621
+      m_Path: <MidiDevice>/note091
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input
+      m_Flags: 0
+    m_Flags: 0
+  _valueTarget:
+    m_PersistentCalls:
+      m_Calls: []
+  _triggerTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 291904335}
+        m_TargetAssemblyTypeName: Karbon.CompositeController, Assembly-CSharp
+        m_MethodName: set_FGPlane2
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8600000, guid: bad04d2672e244c038e39223e10e58dc, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1696721798
 GameObject:
   m_ObjectHideFlags: 0
@@ -3128,6 +3453,87 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Karbon.CameraAngleController
   <JumpAngle>k__BackingField: 60
   <MaxAngle>k__BackingField: 90
+--- !u!1 &1858145054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1858145055}
+  - component: {fileID: 1858145056}
+  m_Layer: 0
+  m_Name: FG Plane Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1858145055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858145054}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2039272841}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1858145056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858145054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110b401dda72443f1a7fda05ab0fe505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Karbon.PadInputHandler
+  <ReleaseTime>k__BackingField: 1
+  <DecayExponent>k__BackingField: 1
+  _input:
+    m_Name: Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: fb96e552-99e1-4128-8aa1-2674c95d2ea8
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 07c6fdba-c4d1-4905-9c53-f3cff6468621
+      m_Path: <MidiDevice>/note090
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input
+      m_Flags: 0
+    m_Flags: 0
+  _valueTarget:
+    m_PersistentCalls:
+      m_Calls: []
+  _triggerTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 291904335}
+        m_TargetAssemblyTypeName: Karbon.CompositeController, Assembly-CSharp
+        m_MethodName: set_FGPlane2
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8600000, guid: 366edf0b66dee407ebdf5593c78dbe62, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1890249478
 GameObject:
   m_ObjectHideFlags: 0
@@ -3241,6 +3647,42 @@ Transform:
   - {fileID: 1639385700}
   - {fileID: 392587429}
   - {fileID: 2044074274}
+  m_Father: {fileID: 1060484555}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2039272840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2039272841}
+  m_Layer: 0
+  m_Name: Composite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2039272841
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039272840}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 257743718}
+  - {fileID: 541364109}
+  - {fileID: 1376445048}
+  - {fileID: 1858145055}
+  - {fileID: 1657320764}
   m_Father: {fileID: 1060484555}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2044074273
