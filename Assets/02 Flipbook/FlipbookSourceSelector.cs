@@ -8,29 +8,40 @@ public sealed class FlipbookSourceSelector : MonoBehaviour
 {
     [SerializeField] string[] _videoFiles = null;
     [SerializeField] float _playbackSpeed = 10;
+    [SerializeField] MeshRenderer _cameraQuad = null;
     [SerializeField] MeshRenderer _videoQuad = null;
 
     GameObject _playerObject;
-    int _currentIndex;
-
-    void Start()
-      => RebuildPlayer(_currentIndex);
+    int _current;
 
     void Update()
     {
-        var index = GetRequestedMovieIndex();
-        if (index < 0 || index == _currentIndex) return;
-        RebuildPlayer(index);
+        var num = GetInputNumber();
+        if (num < 0 || num == _current) return;
+
+        if (num == 0)
+        {
+            _cameraQuad.enabled = true;
+            _videoQuad.enabled = false;
+        }
+        else
+        {
+            RebuildPlayer(num - 1);
+            _cameraQuad.enabled = false;
+            _videoQuad.enabled = true;
+        }
+
+        _current = num;
     }
 
-    void RebuildPlayer(int index)
+    void RebuildPlayer(int videoIndex)
     {
         if (_playerObject != null) Destroy(_playerObject);
 
         _playerObject = new GameObject("HAP Player");
         _playerObject.transform.SetParent(transform, false);
 
-        var filePath = _videoFiles[index % _videoFiles.Length];
+        var filePath = _videoFiles[videoIndex % _videoFiles.Length];
 
         var player = _playerObject.AddComponent<HapPlayer>();
         player.targetRenderer = _videoQuad;
@@ -38,11 +49,9 @@ public sealed class FlipbookSourceSelector : MonoBehaviour
         player.speed = _playbackSpeed;
         player.loop = true;
         player.Open(filePath, HapPlayer.PathMode.StreamingAssets);
-
-        _currentIndex = index;
     }
 
-    static int GetRequestedMovieIndex()
+    static int GetInputNumber()
     {
         var keyboard = Keyboard.current;
         if (keyboard.digit1Key.wasPressedThisFrame) return 0;
