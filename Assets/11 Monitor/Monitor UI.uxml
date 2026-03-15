@@ -1,10 +1,17 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/11%20Monitor/Monitor%20Style.uss?fileID=7433441132597879392&amp;guid=10c3c48e6829a421ea1606a270fd7b73&amp;type=3#Monitor Style"/>
     <engine:VisualElement name="root-container" class="root-container">
-        <engine:VisualElement name="row-container" __unity-builder-selected-element="" class="row-container">
+        <engine:VisualElement name="row-container" class="row-container">
             <engine:VisualElement name="main-row" class="main-row" style="background-image: url(&quot;project://database/Assets/10%20Composite/Composite%20Render.renderTexture?fileID=8400000&amp;guid=02140b9925e6841c9864d4820137b05d&amp;type=2#Composite Render&quot;);"/>
             <engine:VisualElement name="left-column" class="left-column" style="background-image: url(&quot;project://database/Assets/01%20Input/Posterizer/Portrait.asset?fileID=8600000&amp;guid=ca7835b2054cd4c509f6e01f8144854f&amp;type=2#Portrait&quot;);"/>
-            <engine:VisualElement name="right-column" __unity-builder-selected-element="selected" class="right-column" style="background-image: url(&quot;project://database/Assets/01%20Input/Posterizer/Portrait.asset?fileID=8600000&amp;guid=ca7835b2054cd4c509f6e01f8144854f&amp;type=2#Portrait&quot;);"/>
+            <engine:VisualElement name="right-column" class="right-column" style="background-image: url(&quot;project://database/Assets/01%20Input/Posterizer/Portrait.asset?fileID=8600000&amp;guid=ca7835b2054cd4c509f6e01f8144854f&amp;type=2#Portrait&quot;);"/>
         </engine:VisualElement>
+    </engine:VisualElement>
+    <engine:VisualElement name="controller-root" class="controller-root">
+        <engine:DropdownField label="Video Source" name="source-selector" data-source-type="Karbon.SourceSelector, Assembly-CSharp">
+            <Bindings>
+                <engine:DataBinding property="choices" data-source-path="SourceList" binding-mode="ToTarget"/>
+            </Bindings>
+        </engine:DropdownField>
     </engine:VisualElement>
 </engine:UXML>
