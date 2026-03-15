@@ -2196,14 +2196,18 @@ MonoBehaviour:
   _presets:
   - BGColor: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
     FGColor: {r: 1, g: 0, b: 0, a: 1}
-  - BGColor: {r: 0.5377358, g: 0, b: 0.29421812, a: 1}
-    FGColor: {r: 1, g: 0.9822126, b: 0, a: 1}
+  - BGColor: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
+    FGColor: {r: 1, g: 0, b: 0, a: 1}
+  - BGColor: {r: 0.30718228, g: 0.4291226, b: 0.5566038, a: 1}
+    FGColor: {r: 1, g: 0, b: 0.61178017, a: 1}
   - BGColor: {r: 0, g: 0.509434, b: 0.37092024, a: 1}
     FGColor: {r: 0.16509432, g: 1, b: 0.9913824, a: 1}
+  - BGColor: {r: 0.5377358, g: 0, b: 0.29421812, a: 1}
+    FGColor: {r: 1, g: 0.9822126, b: 0, a: 1}
   - BGColor: {r: 0.30718228, g: 0.4291226, b: 0.5566038, a: 1}
     FGColor: {r: 1, g: 0, b: 0.61178017, a: 1}
   - BGColor: {r: 0.07027007, g: 0, b: 0.735849, a: 1}
-    FGColor: {r: 1, g: 1, b: 1, a: 0}
+    FGColor: {r: 1, g: 0.96521086, b: 0.7688679, a: 1}
 --- !u!1 &1060484554
 GameObject:
   m_ObjectHideFlags: 0
@@ -4319,6 +4323,7 @@ MonoBehaviour:
   - Staircase.mov
   - Shoe.mov
   - Tube.mov
+  - Graffiti.mov
   - Eye.mov
   - Bird.mov
   - Tap.mov
