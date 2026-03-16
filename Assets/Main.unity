@@ -344,8 +344,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e643e549a809f4829903e7f0e3206a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Karbon.FlashGlitchAdapter
-  _trigger1MinMax: {x: 0.1, y: 1}
-  _trigger2MinMax: {x: 0.1, y: 1}
+  _trigger1MinMax: {x: 0.1, y: 0.4}
+  _trigger2MinMax: {x: 0.1, y: 0.75}
   _target: {fileID: 291904337}
 --- !u!1 &275082960
 GameObject:
@@ -559,8 +559,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a7571d970044db8e00756f058f9e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: FlashGlitch::FlashGlitch.FlashGlitchController
-  <ReleaseTime1>k__BackingField: 0.4
-  <ReleaseTime2>k__BackingField: 0.9
+  <ReleaseTime1>k__BackingField: 0.2
+  <ReleaseTime2>k__BackingField: 0.5
   <Hue>k__BackingField: 0.7
   <Seed>k__BackingField: 364
   _shader: {fileID: 4800000, guid: a06c33c946564cd19c5200c852eb0551, type: 3}
