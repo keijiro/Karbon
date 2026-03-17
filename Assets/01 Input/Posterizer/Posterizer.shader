@@ -6,6 +6,7 @@ Properties
 
     _Threshold("Threshold", Range(0, 1)) = 0.5
     _DitherStrength("Dither Strength", Range(0, 1)) = 0.4
+    _YOffset("Y Offset", Float) = 0
 
     [KeywordEnum(Disabled, Foreground, Background)]
     _FilterMode("Filter Mode", Float) = 0
@@ -26,12 +27,14 @@ float4 _MainTex_TexelSize;
 
 float _Threshold;
 float _DitherStrength;
+float _YOffset;
 
 static const half kAlphaThreshold = 0.5h;
 
 half4 FragUpdate(CustomRenderTextureVaryings i) : SV_Target
 {
     float2 uv = i.globalTexcoord.xy;
+    uv.y += _YOffset;
 
     float srcAspect = _MainTex_TexelSize.y / _MainTex_TexelSize.x;
     float dstAspect = _CustomRenderTextureWidth / _CustomRenderTextureHeight;

@@ -21,7 +21,7 @@ half4 FragUpdate(CustomRenderTextureVaryings i) : SV_Target
 
     // Human stencil
     BodyPix_Mask mask = BodyPix_SampleMask(uv, _BodyPixTex, _BodyPixTex_TexelSize.zw);
-    float alpha = smoothstep(0.4, 0.6, BodyPix_EvalSegmentation(mask));
+    float alpha = smoothstep(0.1, 0.2, BodyPix_EvalSegmentation(mask));
 
     return float4(color, alpha);
 }
