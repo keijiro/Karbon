@@ -21,6 +21,22 @@ Notes:
   The setup used for the event relied on a [Roland UVC-01], but similar
   devices should also work. A standard webcam can be used as well.
 - Polyphonic aftertouch is required for effect control. The Launchpad Mini is
-  not sufficient because it does not support note velocity.
+  not sufficient because it does not support MPE.
 
 [Roland UVC-01]: https://proav.roland.com/global/products/uvc-01/
+
+## Project Structure
+
+The project is organized around a layered multi-camera rendering setup. Each
+visual stage, such as `02 Flipbook`, `03 VFX`, and `04 Burn`, is rendered by
+its own dedicated camera into a separate `RenderTexture`. The numeric prefixes
+are used to keep these stage directories ordered in the Project window. The
+resulting textures are then composited in `10 Composite` to produce the final
+output.
+
+`CustomRenderTexture` is also used to process the input video stream.
+
+The project uses [BodyPixSentis] to generate a human segmentation mask, which
+is combined with the input video color data in the `Prefilter` shader.
+
+[BodyPixSentis]: https://github.com/keijiro/BodyPixSentis
