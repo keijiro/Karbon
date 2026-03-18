@@ -7,8 +7,8 @@
       "dependencies": {}
     },
     "com.unity.ai.assistant": {
-      "version": "2.1.0-pre.1",
-      "depth": 1,
+      "version": "2.2.0-pre.1",
+      "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.2d.sprite": "1.0.0",
